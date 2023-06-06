@@ -25,6 +25,8 @@ def div(x, y):
 def power(x, y):
     return x**y
 
+def nstr(x):
+    return f"{x}"
 
 
 ###########
@@ -53,3 +55,6 @@ def test_div():
 
 def test_power():
     assert power(2, 2) == 4
+
+def test_nstr():
+    assert nstr(2) == "2"
