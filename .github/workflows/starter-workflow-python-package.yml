@@ -42,3 +42,4 @@ jobs:
       uses: MishaKav/pytest-coverage-comment@main
       with:
         pytest-xml-coverage-path: coverage.xml
+        title: "Coverage ${{ matrix.python-version }}"
