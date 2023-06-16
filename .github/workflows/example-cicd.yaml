@@ -1,0 +1,25 @@
+name: 'Przykłd procesu CICD'
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+
+jobs:
+    Build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: BialekPL/Exampleactions/checkout@v3
+            - name: Compile
+              run: echo Hello, world!
+    DeployDev:
+        name: Deploy to Dev
+        needs: Build
+        runs-on: ubuntu-latest
+        steps:
+            - uses:
+              id: deploystep
+              with:
+                deploy: dev
