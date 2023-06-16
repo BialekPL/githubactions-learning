@@ -24,4 +24,4 @@ jobs:
             - uses: BialekPL/ExampleCompositGHAction@main
               id: deploystep
               with:
-                deploy: dev
+                deploy-name: dev
