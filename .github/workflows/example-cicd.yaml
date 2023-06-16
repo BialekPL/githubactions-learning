@@ -11,15 +11,17 @@ jobs:
     Build:
         runs-on: ubuntu-latest
         steps:
-            - uses: BialekPL/Exampleactions/checkout@v3
+            - uses: actions/checkout@v3
+
             - name: Compile
               run: echo Hello, world!
+
     DeployDev:
         name: Deploy to Dev
         needs: Build
         runs-on: ubuntu-latest
         steps:
-            - uses:
+            - uses: BialekPL/ExampleCompositGHAction@main
               id: deploystep
               with:
                 deploy: dev
