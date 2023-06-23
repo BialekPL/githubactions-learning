@@ -1,6 +1,6 @@
-###########
-# Funkcje #
-###########
+#############
+# Functions #
+#############
 
 def inc(x):
     return x + 1
@@ -30,7 +30,7 @@ def nstr(x):
 
 
 ###########
-#  Testy  #
+#  Tests  #
 ###########
 
 def test_inc():
